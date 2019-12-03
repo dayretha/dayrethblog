@@ -135,15 +135,97 @@
             <h2 class="mb-4">Galería</h2>
             <p>“La fotografía es más que un medio para la comunicación efectiva de ideas. Es un arte creativo”. Ansel Adams.</p>
 		  
-        <header  style="border-radius: 25px;">
-  <img class="logo " src="https://cdn0.iconfinder.com/data/icons/feather/96/camera-512.png" >
-</header>
-<div class="principal">
-<article class="foto" >
-	<img src="http://2.bp.blogspot.com/-oFVg5ykqzX4/UUYw2_ZRv5I/AAAAAAAAAAc/E0O5ay8q3z0/s1600/100_0615.JPG" width=25% height=25%>
-  <img src="https://scontent.fpac1-1.fna.fbcdn.net/v/t1.0-9/p720x720/48420982_10155609411257434_2157398829110919168_o.jpg?_nc_cat=109&_nc_ohc=Q8yg5KeEYr0AQmWYhQqRHo5cfmxk2k8ozgjKnzg67rJhv-nHY2q16JIKA&_nc_ht=scontent.fpac1-1.fna&oh=ef3b556483761b5cfdc6768b28b5241f&oe=5E70489E" width=25% height=25%>
-</article>
+        <h1>Galería de imágenes con efecto lightbox solo con CSS</h1>
+    
+    <ul class="galeria">
+        <li><a href="#img1"><img src="http://www.paisajesimagenes.com/wp-content/uploads/Descripci%C3%B3n-de-paisajes..jpg"></a></li>
+        <li><a href="#img2"><img src="http://neo-deco.es/wp-content/uploads/2013/01/Paisaje-de-monta%C3%B1a.jpg"></a></li>
+        <li><a href="#img3"><img src="http://www.paisajesimagenes.com/wp-content/uploads/Descripci%C3%B3n-de-paisajes..jpg"></a></li>
+        <li><a href="#img4"><img src="http://neo-deco.es/wp-content/uploads/2013/01/Paisaje-de-monta%C3%B1a.jpg"></a></li>
+    </ul>
 
+    <div class="modal" id="img1">
+        <h3>Paisaje 1</h3>
+        <div class="imagen">
+            <a href="#img4">&#60;</a>
+            <a href="#img2"><img src="http://www.paisajesimagenes.com/wp-content/uploads/Descripci%C3%B3n-de-paisajes..jpg"></a>
+            <a href="#img2">></a>
+        </div>
+        <a class="cerrar" href="">X</a>
+    </div>
+    
+    <div class="modal" id="img2">
+        <h3>Paisaje 2</h3>
+        <div class="imagen">
+            <a href="#img1">&#60;</a>
+            <a href="#img3"><img src="http://neo-deco.es/wp-content/uploads/2013/01/Paisaje-de-monta%C3%B1a.jpg"></a>
+            <a href="#img3">></a>
+        </div>
+        <a class="cerrar" href="">X</a>
+    </div>
+    
+    <div class="modal" id="img3">
+        <h3>Paisaje 3</h3>
+        <div class="imagen">
+            <a href="#img2">&#60;</a>
+            <a href="#img4"><img src="http://www.paisajesimagenes.com/wp-content/uploads/Descripci%C3%B3n-de-paisajes..jpg"></a>
+            <a href="#img4">></a>
+        </div>
+        <a class="cerrar" href="">X</a>
+    </div>
+    
+    <div class="modal" id="img4">
+        <h3>Paisaje 4</h3>
+        <div class="imagen">
+            <a href="#img3">&#60;</a>
+            <a href="#img1"><img src="http://neo-deco.es/wp-content/uploads/2013/01/Paisaje-de-monta%C3%B1a.jpg"></a>
+            <a href="#img1">></a>
+        </div>
+        <a class="cerrar" href="">X</a>
+    </div>
+		  width: 100%;
+    height: 50%;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imagen a {
+    color: #fff;
+    font-size: 40px;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.imagen a:nth-child(2) {
+    margin: 0;
+    height: 100%;
+    flex-shrink: 2;
+}
+
+.imagen img {
+    width: 500px;
+    height: 100%;
+    max-width: 100%;
+    border: 7px solid #fff;
+    box-sizing: border-box;
+}
+
+.cerrar {
+    display: block;
+    background: #fff;
+    width: 25px;
+    height: 25px;
+    margin: 15px auto;
+    text-align: center;
+    text-decoration: none;
+    font-size: 25px;
+    color: #000;
+    padding: 5px;
+    border-radius: 50%;
+    line-height: 25px;
+} 
     		<div class="row">
     			<div class="col-md-6">
     				<div class="resume-wrap ftco-animate">
