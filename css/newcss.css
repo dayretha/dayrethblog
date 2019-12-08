@@ -47,7 +47,7 @@
 }
 
 .imagen {
-	width: 100%;
+	width: 50%;
 	height: 50%;
 	
 	display: flex;
@@ -69,8 +69,8 @@
 }
 
 .imagen img {
-	width: 500px;
-	height: 100%;
+	width: 50px;
+	height: 50%;
 	max-width: 100%;
 	border: 7px solid #fff;
 	box-sizing: border-box;
