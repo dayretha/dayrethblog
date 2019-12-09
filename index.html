@@ -138,78 +138,69 @@
             <h2 class="mb-4">Galería</h2>
             <p>“La fotografía es más que un medio para la comunicación efectiva de ideas. Es un arte creativo”. Ansel Adams.</p>
 
-<div class="container">
-  <h2>Image Gallery</h2>
-  <p>The .thumbnail class can be used to display an image gallery.</p>
-  <p>The .caption class adds proper padding and a dark grey color to text inside thumbnails.</p>
-  <p>Click on the images to enlarge them.</p>
-  <div class="row">
-    <div class="col-md-4">
-      <div class="thumbnail">
-        <a href="images/j.jpg" target="_blank">
-          <img src="images/j.jpg" alt="Lights" style="width:70%">
-          <div class="caption">
+<div class="w3-content w3-display-container">
+<a href="images/e.jpg" target="_blank">
+  <img class="mySlides1" src="images/c.jpg" style="width:60%">
+  <div class="caption">
             <p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
           </div>
-        </a>
-      </div>
-    </div>
-    <div class="col-md-4">
-      <div class="thumbnail">
-        <a href="images/e.jpg" target="_blank">
-          <img src="images/e.jpg" alt="Nature" style="width:70%">
-          <div class="caption">
+          <a href="images/e.jpg" target="_blank">
+  <img class="mySlides1" src="images/e.jpg" style="width:60%">
+  <div class="caption">
             <p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
           </div>
-        </a>
-      </div>
-    </div>
-    <div class="col-md-4">
-      <div class="thumbnail">
-        <a href="images/g.jpg" target="_blank">
-          <img src="images/g.jpg" alt="Fjords" style="width:70%">
-          <div class="caption">
+          <a href="images/e.jpg" target="_blank">
+  <img class="mySlides1" src="images/f.jpg" style="width:60%">
+  <div class="caption">
             <p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
           </div>
-        </a>
-      </div>
-    </div>
-  </div>
-</div>
-		  <div class="row">
-		  <div class="col-md-4">
-      <div class="thumbnail">
-        <a href="images/f.jpg" target="_blank">
-          <img src="images/f.jpg" alt="Lights" style="width:70%">
-          <div class="caption">
+          <a href="images/e.jpg" target="_blank">
+  <img class="mySlides1" src="images/g.jpg" style="width:60%">
+  <div class="caption">
             <p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
           </div>
-        </a>
-      </div>
-    </div>
-    <div class="col-md-4">
-      <div class="thumbnail">
-        <a href="images/i.jpg" target="_blank">
-          <img src="images/i.jpg" alt="Nature" style="width:70%">
-          <div class="caption">
+          <a href="images/e.jpg" target="_blank">
+	 <img class="mySlides1" src="images/h.jpg" style="width:60%">
+     <div class="caption">
             <p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
           </div>
-        </a>
-      </div>
-    </div>
-    <div class="col-md-4">
-      <div class="thumbnail">
-        <a href="images/h.jpg" target="_blank">
-          <img src="images/h.jpg" alt="Fjords" style="width:70%">
-          <div class="caption">
+          <a href="images/e.jpg" target="_blank">
+  <img class="mySlides1" src="images/i.jpg" style="width:60%">
+  <div class="caption">
             <p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
           </div>
-        </a>
-      </div>
-    </div>
-  </div>
+          <a href="images/e.jpg" target="_blank">
+  <img class="mySlides1" src="images/j.jpg" style="width:60%">
+  <div class="caption">
+            <p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
+          </div>
+ 
+  <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1, 0)">&#10094;</button>
+  <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1, 0)">&#10095;</button>
 </div>
 
+
+<script>
+var slideIndex = [1,1];
+var slideId = ["mySlides1", "mySlides2"]
+showDivs(1, 0);
+showDivs(1, 1);
+
+function plusDivs(n, no) {
+  showDivs(slideIndex[no] += n, no);
+}
+
+function showDivs(n, no) {
+  var i;
+  var x = document.getElementsByClassName(slideId[no]);
+  if (n > x.length) {slideIndex[no] = 1}
+  if (n < 1) {slideIndex[no] = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  x[slideIndex[no]-1].style.display = "block";  
+}
+</script>
 
 		 </section class id="Galería-section">
 	    </link rel="stylesheet" href="css/newcss.css">
